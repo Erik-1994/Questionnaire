@@ -1,0 +1,133 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/style.css">
+  <title></title>
+</head>
+
+<body>
+  <!-- render score -->
+  <div class="resultWrap py-4 bg-light text-center">
+    <div class="container lead ">
+      <span class="text-primary display-4 p-3"></span>
+
+    </div>
+  </div>
+
+  <div class="setNewQuiz active">
+    <!-- input for name of questionare -->
+    <div class="input-group-text formWrap">Name of questionnaire:
+      <input type="text" name="name" id="name" class="form-control" required>
+    </div>
+
+    <!-- new questionnare form first question -->
+    <div class="formWrap">
+      <form class="new-question my-3">
+        <div class="input-group my-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Your question:</div>
+          </div>
+          <input type="text" name="question" id="question" class="form-control" required>
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Answare A:</div>
+          </div>
+          <input type="text" name="answer" id="A" class="form-control" required>
+          <div class="input-group-text ml-3">
+            <label>
+              <input type="radio" name="rightAnswer" value="0" checked>
+              <span class="ml-2">This is right answer.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Answare B:</div>
+          </div>
+          <input type="text" name="answer" id="B" class="form-control" required>
+          <div class="input-group-text ml-3">
+            <label>
+              <input type="radio" name="rightAnswer" value="1">
+              <span class="ml-2">This is right answer.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Answare C:</div>
+          </div>
+          <input type="text" name="answer" id="C" class="form-control" required>
+          <div class="input-group-text ml-3">
+            <label>
+              <input type="radio" name="rightAnswer" value="2">
+              <span class="ml-2">This is right answer.</span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="buttonWrap text-center">
+      <!-- submit and add questionare -->
+      <button class="btn btn-primary ">submit</button>
+      <!-- add qestion to from  -->
+      <button class="add btn btn-success">add</button>
+      <!-- delete last added question -->
+      <button class="deleteLastQ btn btn-danger">delete</button>
+    </div>
+
+  </div>
+
+  <!-- render questinare from database -->
+  <form class="quiz-form">
+
+  </form>
+
+
+  <div class="navWrap">
+    <!-- show  set questionnare -->
+    <button id="showQuizForm">Set new questionnare</button>
+    <!-- renser nav bar all questionares -->
+    <p>All questionnaires</p>
+    <ul class="quizBar list-group">
+    </ul>
+  </div>
+
+
+
+  <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyA0rF5DLGfZhoWhqcNh7m6TQP3zZgwnGUc",
+      authDomain: "questionnaire-50b07.firebaseapp.com",
+      databaseURL: "https://questionnaire-50b07.firebaseio.com",
+      projectId: "questionnaire-50b07",
+      storageBucket: "questionnaire-50b07.appspot.com",
+      messagingSenderId: "348980020150",
+      appId: "1:348980020150:web:d5a618ba3be58de9e0f717",
+      measurementId: "G-0KHYD1NVHG"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+
+  <script src="assets/bundle.js"></script>
+
+</body>
+
+</html>

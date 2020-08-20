@@ -1,0 +1,62 @@
+/* RESOULT */
+.resultWrap {
+  width: 100%;
+}
+
+/* SET NEW QUIZ */
+.setNewQuiz {
+  width: 85%;
+  display: none;
+  float: right;
+}
+
+.formWrap {
+  width: 75%;
+  margin: 5px auto;
+}
+
+.buttonWrap {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+/* RENDER QUIZ FROM DATABASE */
+
+.quiz-form {
+  width: 75%;
+  margin: 5px auto;
+  display: none;
+  position: relative;
+  float: right;
+}
+
+/* NAV BAR */
+
+.navWrap {
+  max-width: 15%;
+  float: left;
+}
+.quizBar {
+  width: 100%;
+}
+.quizBar li {
+  width: 100%;
+}
+
+.btnLiDelete {
+  margin-right: 30px;
+}
+
+/* active */
+.active {
+  display: block;
+}
+
+.green {
+  color: aquamarine;
+}
+
+label {
+  margin: 0;
+}
